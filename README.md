@@ -1,3 +1,4 @@
+![alt text](https://abload.de/img/panelucdfb.jpg)
 # minicms
 minicms is a super minimal flat file cms written in PHP,
 meant to be used for simple portfolios, personal or smaller business pages.
