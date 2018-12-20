@@ -21,7 +21,10 @@ Contains globally used values, e.g. the charset, title or the default-homepage,
 you can add as many values as you want. For example you could add a entry:  
 footertext: Copyright by me  
 and add this to your snippet/footer.php  
-with $site->get()["footertext"]
+with $site->get()["footertext"]  
+  
+If you don't want /home as your startpage specify  
+home: slug_of_your_wished_homepage  
 
 ### /theme
 Stores everything that's needed for rendering your page,
