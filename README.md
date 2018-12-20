@@ -19,7 +19,9 @@ All you need for your page is the /site directory.
 ### site.yaml
 Contains globally used values, e.g. the charset, title or the default-homepage,
 you can add as many values as you want. For example you could add a entry:  
-footertext: Copyright by me  
+```yaml
+footertext: Copyright by me
+```
 and add this to your snippet/footer.php with
 ```php
 <?= $site->get()["footertext"] ?>
