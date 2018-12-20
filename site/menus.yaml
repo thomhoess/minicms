@@ -1,8 +1,8 @@
 header:
-  startseite:
+  /startseite:
     title: Startseite
 footer:
-  impressum:
+  /impressum:
     title: Impressum
-  datenschutz:
+  /datenschutz:
     title: Datenschutz
