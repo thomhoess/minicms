@@ -130,3 +130,6 @@ Returns the url to a specific snippet.php
 $url->snippet("snippetName")
 ```
   
+## Updates
+Leave your /site folder as it is and replace all other folders and files (/core, /libs, /site, .htaccess and so on).
+You should check for errors after updating, it is possible the syntax will change a bit.
