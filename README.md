@@ -49,8 +49,7 @@ Like with site.yaml you can add as many values as you want, add them to your lay
 You could also add subpages, just create another folder with a page.yaml in your main page-folder.
 
 ### menus.yaml
-This is used for defining a unlimited number of individual menus, the file format is a bit hard to read yet,
-but this is mainly meant for being used with the planned panel.  
+This is used for defining a unlimited number of individual menus.  
 Example:
 ```yaml
 header:  
