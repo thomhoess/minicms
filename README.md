@@ -54,7 +54,12 @@ Example:
 ```yaml
 header:  
   /slug_of_the_page_to_add_with_leading_slash:  
-    title: title_to_show_in_the_menu
+    title: Title to show in the Menu
+  /another_slug_of_the_page_to_add_with_leading_slash:  
+    title: Another Title To show in the Menu
+footer:  
+  /who-am-i:  
+    title: You ask who I am?
 ```
 
 It will be ordered the same way it is in the menus.yaml, if no title is defined, it will be shown the slug.
