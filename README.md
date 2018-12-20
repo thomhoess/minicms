@@ -3,6 +3,8 @@
 minicms is a super minimal flat file cms written in PHP,
 meant to be used for simple portfolios, personal or smaller business pages.
 
+**This is and will forever be free!**
+
 ## This is still in development, you're welcome testing it out and contributing!
 The syntax might change a litte bit, because this is still in early development,
 but i'll tell you if it does so.
