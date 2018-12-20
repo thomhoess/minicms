@@ -41,7 +41,7 @@ with $page->get()["title"]
 You could also add subpages, just create another folder with a page.yaml in your main page-folder.
 
 ### menus.yaml
-This is used for defining a unlimited number of individual numbers, the file format is a bit hard to read yet,
+This is used for defining a unlimited number of individual menus, the file format is a bit hard to read yet,
 but this is mainly meant for being used with the planned panel.  
 Example:  
 header:  
