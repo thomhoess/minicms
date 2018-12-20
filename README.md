@@ -54,7 +54,7 @@ but this is mainly meant for being used with the planned panel.
 Example:
 ```yaml
 header:  
-  slug_of_the_page_to_add:  
+  /slug_of_the_page_to_add_with_leading_slash:  
     title: title_to_show_in_the_menu
 ```
 
@@ -62,7 +62,7 @@ It will be ordered the same way it is in the menus.yaml, if no title is defined,
 Embed Menus in your views or snippets like:  
 ```php
 <?php foreach($site->menu()["header"] as $slug => $item): ?>  
-<a<?php if("/".$slug == $url->page()): ?> class="active"<?php endif ?> href="<?= $url->site() ?>/<?= $slug ?>"><?= $item["title"] ?></a>  
+<a<?php if($slug == $url->page()): ?> class="active"<?php endif ?> href="<?= $url->site() ?><?= $slug ?>"><?= $item["title"] ?></a>  
 <?php endforeach ?>
 ```
 
