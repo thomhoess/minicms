@@ -4,13 +4,13 @@ meant to be used for simple portfolios, personal or smaller business pages.
 
 ## This is still in development, you're welcome testing it out and contributing!
 The syntax might change a litte bit, because this is still in early development,
-but i'll tell if you if it does so.
+but i'll tell you if it does so.
 
 ## Todo
 - Support Markdown
 - Cleanup code
 - Panel
-- children-function for Blogs and so on
+- getChildren-function for Blogs
 
 ## How to use
 All you need for your page is the /site directory.
