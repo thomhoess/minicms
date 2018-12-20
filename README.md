@@ -70,8 +70,6 @@ Embed Menus in your views or snippets like:
 <?php endforeach ?>
 ```
 
-This still looks quite dirty, I'll try making a nicer function for menus, but it works.
-
 ### Functions
 
 Parses a Yaml File and returns it as an array
