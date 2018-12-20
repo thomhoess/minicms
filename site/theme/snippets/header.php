@@ -18,7 +18,7 @@
     <nav id="nav" class="center">
         <ul>
 			<?php foreach($site->menu()["header"] as $slug => $item): ?>
-			<li><a<?php if("/".$slug == $url->page()): ?> class="active"<?php endif ?> href="<?= $url->site() ?>/<?= $slug ?>"><?= $item["title"] ?></a></li>
+			<li><a<?php if($slug == $url->page()): ?> class="active"<?php endif ?> href="<?= $url->site() ?><?= $slug ?>"><?= $item["title"] ?></a></li>
 			<?php endforeach ?>
         </ul>
     </nav>
