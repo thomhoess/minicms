@@ -20,11 +20,15 @@ All you need for your page is the /site directory.
 Contains globally used values, e.g. the charset, title or the default-homepage,
 you can add as many values as you want. For example you could add a entry:  
 footertext: Copyright by me  
-and add this to your snippet/footer.php  
-with $site->get()["footertext"]  
+and add this to your snippet/footer.php with
+```php
+<?= $site->get()["footertext"] ?>
+```
   
-If you don't want /home as your startpage specify  
+If you don't want /home as your startpage specify
+```yaml
 home: slug_of_your_wished_homepage  
+```
 
 ### /theme
 Stores everything that's needed for rendering your page,
@@ -36,61 +40,89 @@ Stores everything that's needed for rendering your page,
 Stores all your pages and files that is related to this specific page
 The name of the folder will be the "slug" of your page, in this folder
 you'll create a file named page.yaml that contains all contents your page needs.
-Like with site.yaml you can add as many values as you want, add them to your layouts  
-with $page->get()["title"]  
+Like with site.yaml you can add as many values as you want, add them to your layouts with
+```php
+<?= $page->get()["title"] ?>
+```
 You could also add subpages, just create another folder with a page.yaml in your main page-folder.
 
 ### menus.yaml
 This is used for defining a unlimited number of individual menus, the file format is a bit hard to read yet,
 but this is mainly meant for being used with the planned panel.  
-Example:  
+Example:
+```yaml
 header:  
   slug_of_the_page_to_add:  
-    title: title_to_show_in_the_menu  
+    title: title_to_show_in_the_menu
+```
 
 It will be ordered the same way it is in the menus.yaml, if no title is defined, it will be shown the slug.
 Embed Menus in your views or snippets like:  
+```php
 <?php foreach($site->menu()["header"] as $slug => $item): ?>  
 <a<?php if("/".$slug == $url->page()): ?> class="active"<?php endif ?> href="<?= $url->site() ?>/<?= $slug ?>"><?= $item["title"] ?></a>  
-<?php endforeach ?>  
+<?php endforeach ?>
+```
 
 This still looks quite dirty, I'll try making a nicer function for menus, but it works.
 
 ### Functions
 
-Parses a Yaml File and returns it as an array  
+Parses a Yaml File and returns it as an array
+```php
 $core->yamlToArray("pathToYamlFile")
+```
 
-Parses markdown and returns html (not working yet)  
+Parses markdown and returns html (not working yet)
+```php
 $core->markdown("textToParse")
+```
 
-Loads the right view and renders the page  
+Loads the right view and renders the page
+```php
 $core->render()
+```
 
-Returns an array with all specified values in page.yaml of the current page  
-$page->get()  
+Returns an array with all specified values in page.yaml of the current page
+```php
+$page->get()
+```
 example: $page->get()["title"]
 
-Returns an array with all specified values in site.yaml  
-$site->get()  
-example: $site->get()["charset"]  
+Returns an array with all specified values in site.yaml
+```php
+$site->get()
+```
+example: $site->get()["charset"]
   
-Returns an array with all specified menus in menus.yaml  
-$site->menu()  
+Returns an array with all specified menus in menus.yaml
+```php
+$site->menu()
+```
 example: foreach($site->menu()["header"] as $slug => $item)  
   
-Returns the tld, host or ip of the site  
-$url->site()  
+Returns the tld, host or ip of the site
+```php
+$url->site()
+```
   
-Returns the slug with a prefixed / (e.g. /blog/blog-post-2)  
-$url->page()  
+Returns the slug with a prefixed / (e.g. /blog/blog-post-2)
+```php
+$url->page()
+```
   
-Returns the url to the assets folder  
-$url->assets()  
+Returns the url to the assets folder
+```php
+$url->assets()
+```
   
-Returns the url to a specific view.php  
-$url->view("viewName")  
+Returns the url to a specific view.php
+```php
+$url->view("viewName")
+```
   
-Returns the url to a specific snippet.php  
-$url->snippet("snippetName")  
+Returns the url to a specific snippet.php
+```php
+$url->snippet("snippetName")
+```
   
